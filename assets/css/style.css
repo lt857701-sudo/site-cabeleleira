@@ -1,0 +1,52 @@
+/* Custom Typography & Specific Animations */
+.font-editorial {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: -0.01em;
+}
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Typographic scale (fixes flat-type-hierarchy) */
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; font-weight: 300; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 3vw, 2.75rem); line-height: 1.15; font-weight: 300; letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); line-height: 1.25; font-weight: 300; }
+
+/* Subtle decorative line */
+.heading-line {
+  display: inline-block;
+  width: 42px;
+  height: 1px;
+  background-color: #BD8987;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Circular stamp spinning effect on hover */
+.stamp-rotate {
+  animation: spin 30s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Before/After Split Line Handle */
+.slider-handle::before,
+.slider-handle::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider-handle::before {
+  top: -1000px;
+  bottom: 100%;
+}
+.slider-handle::after {
+  top: 100%;
+  bottom: -1000px;
+}

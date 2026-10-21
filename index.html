@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Luxe Hair Studio - Seu Cabelo. Sua Melhor Versão.</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Great+Vibes&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Custom Configuration -->
+  <script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FCF7F4',
+              surface: '#F8EFEA',
+              light: '#F3E5DE',
+              rose: '#BD8987',
+              roseDark: '#A86F6D',
+              brown: '#3B231E',
+              brownDeep: '#281714',
+              muted: '#7A625C'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#FCF7F4] text-[#3B231E] font-sans antialiased selection:bg-[#BD8987] selection:text-white">
+  <!-- BEGIN: MainHeader -->
+  <header class="w-full relative z-30 pt-6 pb-4 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between" data-purpose="site-header">
+    <!-- Brand Logo -->
+    <a class="group flex flex-col leading-none" data-purpose="brand-logo" href="#">
+      <span class="font-editorial text-3xl md:text-4xl tracking-[0.25em] text-[#3B231E] font-normal uppercase">Luxe</span>
+      <span class="font-script text-xl md:text-2xl text-[#BD8987] -mt-2 ml-4">Hair Studio</span>
+    </a>
+    <!-- Navigation Menu -->
+    <nav class="hidden md:flex items-center space-x-10 text-xs tracking-[0.2em] uppercase font-medium text-[#3B231E]" data-purpose="navigation-links">
+      <a class="relative py-1 border-b border-[#3B231E] font-semibold" href="#inicio">Início</a>
+      <a class="hover:text-[#BD8987] transition-colors py-1" href="#servicos">Serviços</a>
+      <a class="hover:text-[#BD8987] transition-colors py-1" href="#sobre">Sobre</a>
+      <a class="hover:text-[#BD8987] transition-colors py-1" href="#galeria">Galeria</a>
+      <a class="hover:text-[#BD8987] transition-colors py-1" href="#contato">Contato</a>
+    </nav>
+    <!-- Header CTA Button -->
+    <div class="flex items-center">
+      <a class="inline-flex items-center gap-2 bg-[#BD8987] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md" data-purpose="cta-book-header" href="#agendamento">
+        <span class="">Agende seu horário</span>
+        <svg class="w-3.5 h-3.5 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+
+  <main>
+    <!-- BEGIN: HeroSection -->
+    <section class="relative w-full overflow-hidden bg-[#FCF7F4]" data-purpose="hero-section" id="inicio">
+      <!-- ===== MOBILE: composição vertical — texto acima, imagem embaixo, sem sobreposição ===== -->
+      <div class="md:hidden flex flex-col h-[700px] w-full">
+        <!-- Texto: acima, empilhado -->
+        <div class="flex flex-col justify-center pt-8 pb-4 px-6 text-white space-y-6 max-w-md mx-auto">
+          <div class="flex items-center text-xs tracking-[0.25em] uppercase font-semibold opacity-90">
+            <span class="">BEM-VINDA À LUXE</span>
+            <span class="heading-line bg-white/30"></span>
+          </div>
+          <h1 class="font-editorial text-4xl md:text-5xl font-light leading-tight">
+            <span class="block text-white">SEU CABELO.</span>
+            <span class="block text-[#BD8987]">SUA MELHOR<br>VERSÃO.</span>
+          </h1>
+          <p class="text-sm tracking-widest uppercase font-light leading-relaxed opacity-90">
+            CORTE · COR · TRATAMENTO · CONFIANÇA
+          </p>
+          <a class="inline-flex items-center gap-2 bg-[#BD8987] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-sm hover:shadow-md self-start" href="#contato">
+            <span class="">AGENDAR MEU HORÁRIO</span>
+            <span class="text-sm">→</span>
+          </a>
+        </div>
+        <!-- Imagem: embaixo, ocupa o restante da altura -->
+        <div class="flex-1 relative overflow-hidden">
+          <img src="assets/images/hero.png" alt="Luxe Hair Studio - Seu Cabelo. Sua Melhor Versão." class="w-full h-full object-cover object-position-center block">
+        </div>
+      </div>
+
+      <!-- ===== DESKTOP: imagem full width, texto sobreposto à esquerda ===== -->
+      <div class="hidden md:block">
+        <div class="relative w-full h-[900px]">
+          <img src="assets/images/hero.png" alt="Luxe Hair Studio - Seu Cabelo. Sua Melhor Versão." class="w-full h-full object-cover block">
+          <div class="absolute inset-y-0 left-0 z-10 flex items-center pl-6 md:pl-12 lg:pl-20 pointer-events-auto">
+            <div class="space-y-6 text-white max-w-md">
+              <div class="flex items-center text-xs tracking-[0.25em] uppercase font-semibold opacity-90">
+                <span class="">BEM-VINDA À LUXE</span>
+                <span class="heading-line bg-white/30"></span>
+              </div>
+              <h1 class="font-editorial text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
+                <span class="block text-white">SEU CABELO.</span>
+                <span class="block text-[#BD8987]">SUA MELHOR<br>VERSÃO.</span>
+              </h1>
+              <p class="text-sm md:text-base tracking-widest uppercase font-light leading-relaxed opacity-90">
+                CORTE · COR · TRATAMENTO · CONFIANÇA
+              </p>
+              <a class="inline-flex items-center gap-2 bg-[#BD8987] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-8 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md" href="#contato">
+                <span class="">AGENDAR MEU HORÁRIO</span>
+                <span class="text-sm">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: HeroSection -->
+
+    <!-- BEGIN: ServicesSection -->
+    <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto" data-purpose="services-section" id="servicos">
+    <!-- Section Header -->
+    <div class="mb-10 md:mb-14">
+    <h2 class="flex items-center text-xs tracking-[0.25em] uppercase text-[#7A625C] font-semibold">
+    <span class="">Nossos Serviços</span>
+    <span class="heading-line"></span>
+    </h2>
+    </div>
+    <!-- 4 Services Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Card 1: Corte -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1" data-purpose="service-card">
+    <img alt="Corte de cabelo feminino moderno" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvP7QMHIKU2Rx9LgMEG0F8j0NStSEj18cj3Wqw39clIW6cEmIfPezs8wQ4udZ5i3xKhBuY8YURb3JG8QsducMWz08CVwv96Aub4KJ9k1OMTlsWRTdZ_XcbnlDcKzeJWD-nfVQMW7Gq-OwGeOFOZPsejURIop3xQbl-i8lfAy9WdELf8J4Lw8NMfzaR6tZdpp87pk2YwK6-WZd4ab21MJj8Nz47tTJOMliiMi3I5z8NPgcvh4KkAaJR">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end text-white">
+    <h3 class="font-editorial text-2xl md:text-3xl font-light tracking-wide uppercase">Corte</h3>
+    <div class="flex items-end justify-between mt-1">
+    <p class="text-xs text-white/80 max-w-[150px] leading-relaxed">Precisão que valoriza o seu rosto.</p>
+    <span class="w-8 h-8 rounded-full bg-[#BD8987] flex items-center justify-center text-white text-xs group-hover:bg-white group-hover:text-[#BD8987] transition-colors">
+                →
+              </span>
+    </div>
+    </div>
+    </div>
+    <!-- Card 2: Coloração -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1" data-purpose="service-card">
+    <img alt="Cabelo morena iluminada com mechas perfeitas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDml3vHlbDWHAg3_dAL-XmlztA9jkTSvbzGIGGXM-vTx_HwBgmVe43u7jE32l50DioNxqoIYivTYsMhjgNHDGYHiwGXLt2O5Udoimz9Gbco3R4AScuzXq9spWoL45hX1EdOa8x690rEsSKuGc1blOul1J-0nBHVjzIAqd4Ssa8vVOvKaVt9MWg2Ze-BzU2nQ8ATkaM6AkaWuyH4bJVtzIiwk8_H13C35VtWcyfbPD_xF7ySzDuA9Gx2">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end text-white">
+    <h3 class="font-editorial text-2xl md:text-3xl font-light tracking-wide uppercase">Coloração</h3>
+    <div class="flex items-end justify-between mt-1">
+    <p class="text-xs text-white/80 max-w-[150px] leading-relaxed">Cores que realçam a sua beleza.</p>
+    <span class="w-8 h-8 rounded-full bg-[#BD8987] flex items-center justify-center text-white text-xs group-hover:bg-white group-hover:text-[#BD8987] transition-colors">
+                →
+              </span>
+    </div>
+    </div>
+    </div>
+    <!-- Card 3: Estilo -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1" data-purpose="service-card">
+    <img alt="Penteado e styling com ondas soltas elegantes" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiu8Qz6aNyEKEJaRD90JnErotDWrkjUynOaM7xKc1vKjkCXY9kDqsNjlcG0fMMb7uP9tl_ZXk1ZdPMNwhdpqGl35VN-yPYVDflIj7kRLd8T8EE1x3G5GI9OAfXiLozvWQ5xnnBUb9lQtd2K_P5r50EcBL7HTZXcQgOs-mG6HNeqau4p5YCzZiTtgIx4U66gJNLLg6GTuCrFwwqqO3U2zb2zhFKxrTdnMbEO80v6HdQkThGGdT3Ped4">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end text-white">
+    <h3 class="font-editorial text-2xl md:text-3xl font-light tracking-wide uppercase">Estilo</h3>
+    <div class="flex items-end justify-between mt-1">
+    <p class="text-xs text-white/80 max-w-[150px] leading-relaxed">Escova, ondas e muito mais para o seu dia.</p>
+    <span class="w-8 h-8 rounded-full bg-[#BD8987] flex items-center justify-center text-white text-xs group-hover:bg-white group-hover:text-[#BD8987] transition-colors">
+                →
+              </span>
+    </div>
+    </div>
+    </div>
+    <!-- Card 4: Tratamentos -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1" data-purpose="service-card">
+    <img alt="Cabelo tratado e profundamente hidratado" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnsoa_KfLckN2WBusm_T6kWGZ1doU4GoCXhrk_q7vKNN6sG7ojpFmzapZlkxjyGmm8Khw7gvqf6Y2McUwo3HNdOXaRM2iXY_sINDFftSVvDYydLpxL-SpaAE5x8OWm3ZRwUWsSDSVxGGgVHowHp2dcZmkwoy4geVsouwKUZc39PTqbn-rzXDtkcM1taOB_RaSoY4xREltkvJgRfTcn8HutZL4miqEs-Sely9ddc1OjNWfFsaoZ3V-i">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end text-white">
+    <h3 class="font-editorial text-2xl md:text-3xl font-light tracking-wide uppercase">Tratamentos</h3>
+    <div class="flex items-end justify-between mt-1">
+    <p class="text-xs text-white/80 max-w-[150px] leading-relaxed">Cabelos mais saudáveis, fortes e brilhantes.</p>
+    <span class="w-8 h-8 rounded-full bg-[#BD8987] flex items-center justify-center text-white text-xs group-hover:bg-white group-hover:text-[#BD8987] transition-colors">
+                →
+              </span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- END: ServicesSection -->
+
+    <!-- BEGIN: BeforeAfterSection -->
+    <section class="py-16 md:py-20 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto" data-purpose="transformations-section">
+    <div class="bg-[#F8EFEA] rounded-3xl p-8 md:p-12 lg:p-14">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <!-- Column Left: Text & CTA -->
+    <div class="lg:col-span-4 space-y-6">
+    <div class="flex items-center text-xs tracking-[0.25em] uppercase text-[#7A625C] font-semibold">
+    <span class="">Antes e Depois</span>
+    <span class="heading-line"></span>
+    </div>
+    <h2 class="font-editorial text-3xl md:text-4xl lg:text-5xl uppercase font-light text-[#3B231E] leading-tight">
+              Transformações<br>Reais
+            </h2>
+    <p class="text-sm text-[#7A625C] leading-relaxed max-w-sm">
+              Resultados que falam por si. Mais beleza, autoestima e confiança.
+            </p>
+    <div class="pt-2">
+    <a class="inline-flex items-center gap-2 bg-[#BD8987] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-6 py-3.5 rounded-full transition-all duration-300" href="#galeria">
+    <span class="">Ver mais resultados</span>
+    <span class="text-sm">→</span>
+    </a>
+    </div>
+    </div>
+    <!-- Column Right: Before/After Comparison Visual -->
+    <div class="lg:col-span-8 flex flex-col md:flex-row items-center gap-8 justify-between">
+    <!-- Split Image Card: Comparador Antes/Depois com controle deslizante -->
+    <div class="relative w-full max-w-xl aspect-[16/10] rounded-2xl overflow-hidden shadow-lg bg-neutral-200" data-purpose="before-after-display">
+      <!-- Depois (camada inferior, 100%) -->
+      <img alt="Depois da transformação capilar no Luxe" class="absolute inset-0 w-full h-full object-cover object-position-center" src="assets/images/depois.png">
+      <!-- Antes (camada superior, recortada pelo controle deslizante) -->
+      <div class="absolute inset-0 overflow-hidden" id="ba-after-wrap">
+        <img alt="Antes da transformação capilar" class="absolute inset-0 w-full h-full object-cover object-position-center" src="assets/images/antes.jpg">
+      </div>
+      <span class="absolute top-4 left-4 z-20 bg-black/40 backdrop-blur-sm text-white text-[10px] tracking-widest uppercase font-medium px-3 py-1 rounded-full">
+        Antes
+      </span>
+      <span class="absolute top-4 right-4 z-20 bg-[#BD8987]/80 backdrop-blur-sm text-white text-[10px] tracking-widest uppercase font-medium px-3 py-1 rounded-full">
+        Depois
+      </span>
+      <!-- Divisor vertical -->
+      <div class="absolute top-0 left-[50%] w-[1px] h-full bg-white z-20 transform -translate-x-1/2 cursor-ew-resize" id="ba-divider"></div>
+      <!-- Controle circular -->
+      <div class="absolute top-1/2 left-[50%] z-30 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-[#BD8987] text-xs font-bold cursor-ew-resize transform -translate-x-1/2 -translate-y-1/2" id="ba-handle" role="slider" aria-label="Comparador antes/depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+        ⟨ ⟩
+      </div>
+    </div>
+    <!-- Carousel Pagination Counter -->
+    <div class="flex items-center space-x-3 text-xs tracking-widest text-[#7A625C] font-mono">
+    <span class="text-[#3B231E] font-semibold">01</span>
+    <span class="w-6 h-[1px] bg-[#BD8987]"></span>
+    <span class="">03</span>
+    <button class="ml-2 hover:text-[#BD8987] transition-colors" title="Próximo resultado">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+    </svg>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- END: BeforeAfterSection -->
+
+    <!-- BEGIN: InstagramSection -->
+    <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto" data-purpose="instagram-feed-section" id="galeria">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <!-- Left Column: Title & Social Button -->
+    <div class="lg:col-span-4 space-y-6">
+    <div class="flex items-center text-xs tracking-[0.25em] uppercase text-[#7A625C] font-semibold">
+    <span class="">Nosso Instagram</span>
+    <span class="heading-line"></span>
+    </div>
+    <h2 class="font-editorial text-3xl md:text-4xl lg:text-5xl uppercase font-light text-[#3B231E] leading-tight">
+            Beleza em Cada<br>Detalhe
+          </h2>
+    <p class="text-sm text-[#7A625C] leading-relaxed max-w-sm">
+            Acompanhe nosso dia a dia, novos looks e inspirações.
+          </p>
+    <div class="pt-2">
+    <a class="inline-flex items-center gap-2.5 bg-[#BD8987] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-6 py-3.5 rounded-full transition-all duration-300" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+    <span class="">Siga nosso Instagram</span>
+    <!-- Instagram Icon -->
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+    </svg>
+    </a>
+    </div>
+    </div>
+    <!-- Right Column: 4 Instagram Photos Grid -->
+    <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <!-- Insta Card 1 -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+    <img alt="Ondas elegantes morena" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSbNYsTF25Yqww1aO-T5i5onTe9FyjIPwCp7vvCf4LcI7HKrrI9o-2XkglFh3FMegX1kF30O_pt5KEdcNXVBrBlb_Jt5M3ASjdeavu00Vu0IkPqiOGJnAO9DWH9uE9EZZhWr4vZVISwE3qIe6CSAdbovF6pUu-fD4M_pULwpaTO5h2nihDn8SWploEZawFMOT5AP5IiNmvBUXMqhCiUJ3LWzMFfua5g-VTzk6Joee5XJPnr0d6Nyb">
+    <span class="absolute top-3 left-3 bg-[#BD8987]/80 backdrop-blur-sm text-white text-[9px] tracking-wider uppercase font-medium px-2.5 py-0.5 rounded-full">
+              Tendência
+            </span>
+    <div class="absolute bottom-3 right-3 text-white opacity-80 group-hover:opacity-100 transition-opacity">
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+    </div>
+    </div>
+    <!-- Insta Card 2 -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+    <img alt="Penteado sofisticado preso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9m-o_ESwEJMhqALABENJMw49riEjXFIr3ISStTgp0LReaTNa_oAe6pY8PRemM7fwkJ9j1M3G3rrmSigue5FCyDbBcJanA6Q-BbLlWuQv98IYRmgHzkpI8fTJf0coPfpoo1QwSvDX-f7T45QINBsieoC1gICv1kqusU9j5d41TUiE2XQ5GBWCujkR-zhW6Dt0_Z2kK1Rp1HwFVZjRvw3VPXN7IZfJP03NAP-H5dZODrSZfXVJT5IBh">
+    <span class="absolute top-3 left-3 bg-[#BD8987]/80 backdrop-blur-sm text-white text-[9px] tracking-wider uppercase font-medium px-2.5 py-0.5 rounded-full">
+              Novo Look
+            </span>
+    </div>
+    <!-- Insta Card 3 -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+    <img alt="Morena iluminada perfil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6D_1xYFSy_RYIxdbixPOHuRO6kIsvsULj3fLJmzhcfzmmwydZh4f64_fqrYNTVojP2kX1GMr2IrhwcXL89zk2A3Jmu9DoSdty8WCtIh5kc7UVMLBItAWikb3m0O3-M08ua47iHVYcKX8ZkiFg9DQQe75mh4zuBgT7N1XxgeS1Ksf-FPVkKO6dpnJDcGsmaifgIbUYlnXK911A6HlB0bd_9aOXub_Ib2bNieoslhGaGR57Qq4ODVSh">
+    <span class="absolute top-3 left-3 bg-[#BD8987]/80 backdrop-blur-sm text-white text-[9px] tracking-wider uppercase font-medium px-2.5 py-0.5 rounded-full">
+              Beleza Real
+            </span>
+    </div>
+    <!-- Insta Card 4 -->
+    <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+    <img alt="Brilho e movimento capilar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTU0BGlYH-SWeFOMug-Qr3ccGT3Er97HZifLZgOvOX0TzGN0ePhpaJbA51Rbr-bkdju4G4Q0NKRS7x5mQLuKXdpJxl1ewgQGxKitKKxMj7xJca4FR7j0tIGOCzkd70Ii07iBky9vcM4E7o3GSM2SNdeZv1zGRSaPkYrOvpcw89UB7Goy8OZnuISSafnZy-3CCmPnTlFJO3miNvSgfVBXKs6jrdc1a-xd1jVPEHQGXSMZX7MZ6UFjrV">
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- END: InstagramSection -->
+  </main>
+
+  <!-- BEGIN: MainFooter -->
+  <footer class="bg-[#BD8987] text-white pt-16 pb-10 px-6 md:px-12 lg:px-20 mt-12" data-purpose="site-footer" id="contato">
+  <div class="max-w-7xl mx-auto">
+  <!-- Top Area: Brand, Slogan, Socials, CTA Button -->
+  <div class="flex flex-col lg:flex-row items-center justify-between gap-8 pb-12">
+  <!-- Brand & Slogan -->
+  <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 text-center sm:text-left">
+  <a class="flex flex-col leading-none" href="#">
+  <span class="font-editorial text-3xl md:text-4xl tracking-[0.25em] text-white uppercase">Luxe</span>
+  <span class="font-script text-xl md:text-2xl text-white/90 -mt-2 ml-4">Hair Studio</span>
+  </a>
+  <div class="hidden sm:block w-[1px] h-10 bg-white/30"></div>
+  <p class="text-xs tracking-[0.2em] uppercase font-light text-white/90 leading-relaxed">
+            Cabelos Saudáveis.<br>Beleza Real.
+          </p>
+  </div>
+  <!-- Social Icons -->
+  <div class="flex flex-col items-center gap-2">
+  <span class="text-[10px] tracking-[0.25em] uppercase text-white/80 font-medium">Nos Siga</span>
+  <div class="flex items-center space-x-3 text-white">
+  <!-- Instagram -->
+  <a class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white hover:text-[#BD8987] transition-all" href="#" title="Instagram">
+  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+  </a>
+  <!-- Facebook -->
+  <a class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white hover:text-[#BD8987] transition-all" href="#" title="Facebook">
+  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z"></path></svg>
+  </a>
+  <!-- TikTok -->
+  <a class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white hover:text-[#BD8987] transition-all" href="#" title="TikTok">
+  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97v7.65c0 2.37-.89 4.69-2.52 6.32-1.62 1.64-3.92 2.53-6.27 2.47-3.32-.08-6.19-2.31-6.95-5.54-.76-3.23.82-6.57 3.88-7.96.96-.44 2.01-.65 3.07-.63v4.06c-.63.02-1.26.18-1.81.49-1.04.59-1.67 1.72-1.57 2.92.1 1.2 1 2.18 2.21 2.39 1.2.22 2.42-.37 2.97-1.45.24-.46.36-.98.35-1.51V.02z"></path></svg>
+  </a>
+  <!-- Pinterest -->
+  <a class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center hover:bg-white hover:text-[#BD8987] transition-all" href="#" title="Pinterest">
+  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-4.37 23.18c-.05-.98-.09-2.48.02-3.55l1.04-4.42s-.26-.52-.26-1.3c0-1.22.7-2.13 1.58-2.13.75 0 1.11.56 1.11 1.24 0 .75-.48 1.88-.73 2.92-.21.87.43 1.58 1.29 1.58 1.55 0 2.74-1.63 2.74-3.99 0-2.09-1.5-3.55-3.64-3.55-2.48 0-3.94 1.86-3.94 3.78 0 .75.29 1.55.65 1.99.07.09.08.16.06.25l-.24.99c-.04.16-.13.2-.3.12-1.12-.52-1.82-2.15-1.82-3.46 0-2.82 2.05-5.41 5.91-5.41 3.1 0 5.51 2.21 5.51 5.16 0 3.08-1.94 5.56-4.64 5.56-.91 0-1.76-.47-2.05-1.03l-.56 2.13c-.2 1-.78 2.26-1.16 3.04A12 12 0 1 0 12 0z"></path></svg>
+  </a>
+  </div>
+  </div>
+  <!-- Appointment Pill Action -->
+  <div>
+  <a class="inline-flex items-center gap-2 bg-[#A86F6D] hover:bg-white hover:text-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-8 py-3.5 rounded-full transition-all duration-300 shadow-inner" href="#agendamento">
+  <span class="">Agende seu horário</span>
+  <span class="text-sm">→</span>
+  </a>
+  </div>
+  </div>
+  <!-- Delicate Horizontal Star Divider -->
+  <div class="relative flex items-center justify-center my-6">
+  <div class="w-full h-[1px] bg-white/20"></div>
+  <div class="absolute px-3 bg-[#BD8987] text-white/70 text-sm">✦</div>
+  </div>
+  <!-- Bottom Legal & Navigation -->
+  <div class="pt-4 flex flex-col md:flex-row items-center justify-between text-[11px] text-white/70 tracking-wider space-y-4 md:space-y-0">
+  <div class="">
+          © 2026 Luxe Hair Studio. Todos os direitos reservados.
+        </div>
+  <div class="flex items-center space-x-6">
+  <a class="hover:text-white transition-colors" href="#">Política de Privacidade</a>
+  <span class="">|</span>
+  <a class="hover:text-white transition-colors" href="#">Termos de Uso</a>
+  <span class="">|</span>
+  <a class="hover:text-white transition-colors" href="#">Contato</a>
+  </div>
+  </div>
+  </div>
+  </footer>
+  <!-- END: MainFooter -->
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
