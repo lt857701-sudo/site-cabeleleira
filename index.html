@@ -39,25 +39,25 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-[#FCF7F4] text-[#3B231E] font-sans antialiased selection:bg-[#BD8987] selection:text-white">
+<body class="bg-[#FCF6F0] text-[#391C18] font-sans antialiased selection:bg-[#BD7778] selection:text-white">
   <!-- BEGIN: MainHeader -->
   <header class="w-full relative z-30 pt-4 pb-3 px-5 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between" data-purpose="site-header">
     <!-- Brand Logo -->
     <a class="group flex flex-col leading-none" data-purpose="brand-logo" href="#">
-      <span class="font-editorial text-3xl md:text-4xl tracking-[0.25em] text-[#3B231E] font-normal uppercase">Luxe</span>
-      <span class="font-script text-xl md:text-2xl text-[#BD8987] -mt-2 ml-4">Hair Studio</span>
+      <span class="font-editorial text-3xl md:text-4xl tracking-[0.25em] text-[#391C18] font-normal uppercase">Luxe</span>
+      <span class="font-script text-xl md:text-2xl text-[#A85C5C] -mt-2 ml-4">Hair Studio</span>
     </a>
     <!-- Navigation Menu (desktop) -->
-    <nav class="hidden md:flex items-center space-x-10 text-xs tracking-[0.2em] uppercase font-medium text-[#3B231E]" data-purpose="navigation-links">
-      <a class="relative py-1 border-b border-[#3B231E] font-semibold" href="#inicio">Início</a>
-      <a class="hover:text-[#BD8987] transition-colors py-1" href="#servicos">Serviços</a>
-      <a class="hover:text-[#BD8987] transition-colors py-1" href="#sobre">Sobre</a>
-      <a class="hover:text-[#BD8987] transition-colors py-1" href="#galeria">Galeria</a>
-      <a class="hover:text-[#BD8987] transition-colors py-1" href="#contato">Contato</a>
+    <nav class="hidden md:flex items-center space-x-10 text-xs tracking-[0.2em] uppercase font-medium text-[#391C18]" data-purpose="navigation-links">
+      <a class="relative py-1 border-b border-[#391C18] font-semibold" href="#inicio">Início</a>
+      <a class="hover:text-[#A85C5C] transition-colors py-1" href="#servicos">Serviços</a>
+      <a class="hover:text-[#A85C5C] transition-colors py-1" href="#sobre">Sobre</a>
+      <a class="hover:text-[#A85C5C] transition-colors py-1" href="#galeria">Galeria</a>
+      <a class="hover:text-[#A85C5C] transition-colors py-1" href="#contato">Contato</a>
     </nav>
     <!-- Header CTA Button (desktop only) -->
     <div class="hidden md:flex items-center">
-      <a class="inline-flex items-center gap-2 bg-[#BD7775] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-8 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md" data-purpose="cta-book-header" href="#agendamento">
+      <a class="inline-flex items-center gap-2 bg-[#A85C5C] hover:bg-[#944A4A] text-white text-xs tracking-[0.16em] uppercase font-medium px-8 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md" data-purpose="cta-book-header" href="#agendamento">
         <span class="">AGENDAR SEU HORÁRIO</span>
         <span class="text-sm">→</span>
       </a>
@@ -79,58 +79,22 @@
   </nav>
 
   <main>
-    <!-- BEGIN: HeroSection -->
-    <section class="relative w-full overflow-hidden bg-[#FCF6F0]" data-purpose="hero-section" id="inicio">
-      <!-- ===== MOBILE: composição vertical — texto acima, imagem embaixo ===== -->
-      <div class="md:hidden flex flex-col min-h-[85vh] w-full pt-4 pb-8 px-5">
-        <!-- Texto: acima, empilhado -->
-        <div class="flex flex-col justify-start space-y-5 max-w-md mx-auto">
-          <div class="flex items-center hero-intro">
-            <span class="">BELEZA QUE REVELA VOCÊ</span>
-          </div>
-          <h1 class="hero-title text-4xl md:text-5xl">
-            <span class="block">Seu cabelo.</span>
-            <span class="block rose">Sua melhor</span>
-            <span class="block">versão.</span>
-          </h1>
-          <p class="hero-support">
-            Corte, cor e tratamentos pensados<br>para você.
-          </p>
-          <a class="inline-flex items-center gap-2 bg-[#BD7775] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-sm hover:shadow-md self-start w-full text-center" href="#contato">
-            <span class="">AGENDAR MEU HORÁRIO</span>
-            <span class="text-sm">→</span>
-          </a>
-        </div>
-        <!-- Imagem: embaixo, ocupa o restante da altura -->
-        <div class="flex-1 relative overflow-hidden">
-          <img src="assets/images/hero.png" alt="Luxe Hair Studio - Modelo com cabelo castanho volumoso" class="w-full h-full object-cover object-position-center block">
-        </div>
+  <!-- BEGIN: HeroSection -->
+    <section class="hero relative w-full overflow-hidden" data-purpose="hero-section" id="inicio">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="block">Seu cabelo.</span>
+          <span class="block highlight">Sua melhor</span>
+          <span class="block">versão.</span>
+        </h1>
+        <p class="hero-support">Corte, cor e tratamentos pensados para você.</p>
+        <a class="hero-cta" href="#contato">
+          AGENDAR MEU HORÁRIO →
+        </a>
       </div>
 
-      <!-- ===== DESKTOP: composição horizontal — texto à esquerda, imagem à direita ===== -->
-      <div class="hidden md:block hero-desktop-container">
-        <!-- Texto à esquerda -->
-        <div class="hero-desktop-text flex flex-col justify-start space-y-6">
-          <div class="flex items-center hero-intro">
-            <span class="">BELEZA QUE REVELA VOCÊ</span>
-          </div>
-          <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl">
-            <span class="block">Seu cabelo.</span>
-            <span class="block rose">Sua melhor</span>
-            <span class="block">versão.</span>
-          </h1>
-          <p class="hero-support text-lg">
-            Corte, cor e tratamentos pensados para você.
-          </p>
-          <a class="inline-flex items-center gap-2 bg-[#BD7775] hover:bg-[#A86F6D] text-white text-xs tracking-[0.16em] uppercase font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-sm hover:shadow-md self-start" href="#contato">
-            <span class="">AGENDAR MEU HORÁRIO</span>
-            <span class="text-sm">→</span>
-          </a>
-        </div>
-        <!-- Imagem à direita -->
-        <div class="hero-desktop-image">
-          <img src="assets/images/hero.png" alt="Luxe Hair Studio - Modelo com cabelo castanho volumoso" class="w-full h-full object-cover object-position-center block">
-        </div>
+      <div class="hero-image">
+        <img src="assets/images/hero.png" alt="Luxe Hair Studio - Modelo com cabelo volumoso">
       </div>
     </section>
     <!-- END: HeroSection -->
@@ -331,7 +295,7 @@
   </main>
 
   <!-- BEGIN: MainFooter -->
-  <footer class="bg-[#BD8987] text-white pt-16 pb-10 px-6 md:px-12 lg:px-20 mt-12" data-purpose="site-footer" id="contato">
+  <footer class="bg-[#A85C5C] text-white pt-16 pb-10 px-6 md:px-12 lg:px-20 mt-12" data-purpose="site-footer" id="contato">
   <div class="max-w-7xl mx-auto">
   <!-- Top Area: Brand, Slogan, Socials, CTA Button -->
   <div class="flex flex-col lg:flex-row items-center justify-between gap-8 pb-12">
