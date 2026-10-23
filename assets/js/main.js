@@ -91,3 +91,23 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   const rect = container.getBoundingClientRect();
   updateFromClientX(rect.left + rect.width / 2);
 })();
+
+// --- Menu hambúrguer mobile ---
+function toggleMobileMenu(btn) {
+  const nav = document.getElementById('mobile-nav');
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !expanded);
+  btn.classList.toggle('active');
+  nav.classList.toggle('open');
+}
+
+// Fecha o menu ao clicar em um link
+document.querySelectorAll('.mobile-nav a').forEach((link) => {
+  link.addEventListener('click', () => {
+    const btn = document.querySelector('.mobile-menu-btn');
+    const nav = document.getElementById('mobile-nav');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.classList.remove('active');
+    nav.classList.remove('open');
+  });
+});

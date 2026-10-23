@@ -50,3 +50,85 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); line-height: 1.25; font-weight: 30
   top: 100%;
   bottom: -1000px;
 }
+
+/* ===== Hero mobile — cores e tipografia da referência ===== */
+.hero-intro {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #BD8987;
+  font-weight: 500;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: #3B231E;
+}
+.hero-title .rose {
+  color: #BD8987;
+}
+.hero-support {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #3B231E;
+  font-weight: 400;
+}
+
+/* Menu hambúrguer mobile */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+.mobile-menu-btn span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: #3B231E;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Menu mobile overlay */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: #FCF7F4;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.mobile-nav.open {
+  transform: translateX(0);
+}
+.mobile-nav a {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3B231E;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Fecha o menu ao clicar em um link */
+.mobile-nav a.active-link {
+  color: #BD8987;
+}

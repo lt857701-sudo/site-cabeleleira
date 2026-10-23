@@ -24,3 +24,5 @@ out/
 # Local server / runtime
 .env
 .env.local
+
+.vercel
