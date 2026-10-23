@@ -79,22 +79,22 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); line-height: 1.25; font-weight: 30
 /* Hero desktop — composição horizontal: texto à esquerda, imagem à direita */
 .hero-desktop-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 48% 52%;
+  gap: 3rem;
   align-items: center;
   min-h-screen;
-  padding-top: 80px;
-  padding-bottom: 3rem;
+  padding-top: 90px;
+  padding-bottom: 2rem;
 }
 .hero-desktop-text {
-  max-width: 520px;
-  padding-left: 1rem;
+  max-width: 560px;
+  padding-left: 0.5rem;
 }
 .hero-desktop-image {
   position: relative;
   overflow: hidden;
   border-radius: 2rem;
-  box-shadow: 0 20px 40px -10px rgba(59, 28, 24, 0.15);
+  box-shadow: 0 20px 40px -10px rgba(59, 28, 24, 0.12);
 }
 .hero-desktop-image img {
   width: 100%;
